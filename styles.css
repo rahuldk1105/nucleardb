@@ -1,0 +1,178 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the survey form */
+.survey-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1f2c3c, #2a3e56);
+}
+
+.survey-form {
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #2a3e56;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    color: #5f6368;
+}
+
+/* Grid layout for input fields */
+.survey-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.input-container {
+    width: 48%;  /* Adjust width to fit two items per row */
+}
+
+.input100 {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.input100:focus {
+    border-color: #5e9ed6;
+    box-shadow: 0 0 5px rgba(94, 158, 214, 0.5);
+    outline: none;
+}
+
+.has-val {
+    border-color: #5e9ed6;
+}
+
+/* File input */
+.input-file {
+    display: none; /* Hide the actual file input */
+}
+
+.input-file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a52a2a;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make the label the same size as the input field */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input-file-label:hover {
+    background-color: #8b2a2a;
+}
+
+.file-name {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Form buttons */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #a52a2a; /* Set background color to #a52a2a */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover, .btn-submit:active {
+    background-color: #8b2a2a; /* Same as the hover state */
+}
+
+/* Error message */
+.alert-validate {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .survey-form {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .input100, .btn-submit {
+        font-size: 14px;
+    }
+
+    .input-container {
+        width: 100%;  /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .survey-form {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .input100, .btn-submit {
+        font-size: 12px;
+    }
+
+    .input-container {
+        width: 100%;  /* Full width on smaller screens */
+    }
+}
+
+/* Focus state and hover effect for inputs and buttons */
+.input100:focus {
+    border-color: #5e9ed6;
+    box-shadow: 0 0 8px rgba(94, 158, 214, 0.5);
+}
+
+.btn-submit:hover {
+    background-color: #8b2a2a;
+}
