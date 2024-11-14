@@ -1,28 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Power Plant Location Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
 <div class="survey-form-container">
-    <form class="survey-form">
+    <form class="survey-form" id="nuclear-assessment-form">
         <h2>Report submission for Nuclear Power Plant Construction</h2>
         <p>Please fill out the necessary details to assess the location.</p>
         
         <div class="survey-fields">
             <div class="input-container">
-                <input class="input100" type="text" name="location" placeholder="Location Name">
+                <input class="input100" type="text" name="location" placeholder="Location Name" required>
             </div>
             <div class="input-container">
-                <input class="input100" type="text" name="distance" placeholder="Distance to Nearest City">
-            </div>
-
-            <div class="input-container">
-                <input class="input100" type="number" name="population_density" placeholder="Population Density (per km²)">
-            </div>
-            <div class="input-container">
-                <input class="input100" type="number" name="area_size" placeholder="Area Size (in sq km)">
+                <input class="input100" type="text" name="distance" placeholder="Distance to Nearest City" required>
             </div>
 
             <div class="input-container">
-                <input class="input100" type="text" name="climate" placeholder="Climate Conditions">
+                <input class="input100" type="number" name="population_density" placeholder="Population Density (per km²)" required>
             </div>
             <div class="input-container">
-                <input class="input100" type="file" name="terrain_map" class="input-file" id="terrain-map">
+                <input class="input100" type="number" name="area_size" placeholder="Area Size (in sq km)" required>
+            </div>
+
+            <div class="input-container">
+                <input class="input100" type="text" name="climate" placeholder="Climate Conditions" required>
+            </div>
+            <div class="input-container">
+                <input class="input100" type="file" name="terrain_map" class="input-file" id="terrain-map" required>
                 <label for="terrain-map" class="input-file-label">Upload Terrain Map</label>
             </div>
 
@@ -32,3 +42,7 @@
         <button type="submit" class="btn-submit">Submit</button>
     </form>
 </div>
+
+<script src="index.js"></script>
+</body>
+</html>
